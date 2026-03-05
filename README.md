@@ -34,9 +34,14 @@ API RESTful desenvolvida em .NET 9 para gerenciamento de catálogo de produtos d
 
 ## Rodando os Testes
 
-Para executar os testes unitarios de regra de negócio (Services):
+Para executar os testes unitarios de regra de negócio (Services)SS
 
-    dotnet test
-
+    dotnet test    
 ---
+
+## Nota de Segurança e Boas Práticas
+
+Você notará que a `ConnectionString` com as credenciais do banco PostgreSQL está exposta no arquivo `appsettings.json`. 
+
+**Isso foi feito intencionalmente para facilitar a execução e avaliação deste desafio técnico localmente.** Em um ambiente de produção real, as credenciais estariam isoladas do código-fonte e seriam injetadas através de **Variáveis de Ambiente** no servidor ou gerenciadas por cofres de senhas (como *Azure Key Vault* ou *AWS Secrets Manager*), garantindo que nenhum dado sensível seja commitado no repositório.
 
